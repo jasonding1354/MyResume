@@ -1,0 +1,121 @@
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.80]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Jason}{Ding}
+\title{To apply for the intern}                               % optional, remove / comment the line if not wanted
+\address{Room204,Xi Qu}{Huazhong University of Science and Technology}{Wuhan,China}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+86 18771086761}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\email{ding1354@126.com}
+\homepage{jasonding1354.github.io} 
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{Since 2013}{Master}{Huazhong University of Science and Technology}{Information and Communication Engineering}{\textit{Grade:86.7(Top 10\%)}}{}  % arguments 3 to 6 can be left empty
+\cventry{2008--2012}{Bachelor}{Ludong University}{Communication Engineering}{\textit{Grade:87.8(Top 5\%)}}{}
+
+\section{Skills}
+\cvitem{English}{CET-6}
+\cvitem{Computer}{System Integration Project Management Engineer in Qualification Certificate of Computer and Software Technology Proficiency}
+\cvitem{Tech Blog}{jasonding1354.github.io}
+\cvitem{Competence}{I have experience with C++ and Python.\newline
+			    I have excellent problem-solving skills, experience in object-oriented development.\newline
+			    I have good comprehension of data structures, algorithms.\newline
+			    I am familiar with the basic knowledge of machine learning.\newline
+			    I am interested in data analysis.\newline
+			    I have good skills of knowledge management,which I used to put my knowledge on the tech blog.}
+
+\section{Project Experience}
+\renewcommand{\baselinestretch}{1.2}
+
+\cventry{2014 - 2015}{Video monitoring software platform system}{C++\quad OpenCV}{}{}{}
+\subsection{Project Description}
+\cvitem{}{Video monitoring software platform system is aimed at building an intelligent platform,which supports multiple manufacturers' video monitoring device,supplies live and video on demand service,supplies recording and device management,in addition,face recognition function.}
+\subsection{Personal Work}
+\cvitem{}{
+\begin{itemize}
+\item Implement video storage, fast query and recording schedule
+\item Implement taking picture based on frame, photo schedule
+\item In charge of the development of face tracking and face recognition function
+	\begin{itemize}
+	\item Use AdaBoost,MeanShift,Kalman filter algorithm to track human face
+	\item Develop ActiveX control to collect face
+	\item Use parallel programming skills and similar search algorithm for face recognition 
+	\end{itemize}
+\end{itemize}
+}
+
+\cventry{2013-2015}{Research on rapid speaker recognition}{C++\quad Python}{National Natural Science Foundation}{}{}
+\subsection{Project Description}
+\cvitem{}{The research on rapid speaker recognition is aimed at using voiceprint recognition technique to filter voice spam and detect abnormal.}
+\subsection{Personal Work}
+\cvitem{}{
+\begin{itemize}
+\item Develop speech acquisition system based on the embeded linux systems
+\item Study the similar search algorithm in high dimension vector space,especially locality sensitive hashing algorithm
+\end{itemize}
+}
+
+\section{Awards}
+\cvitem{2014.10}{Zhi Xing scholarships of HUST}
+\cvitem{2014.09}{Graduate students full scholarships of HUST}
+\cvitem{2013.09}{Graduate students full scholarships of HUST}
+\cvitem{2012.06}{Excellent graduates award of Ludong university}
+\cvitem{2011.08}{Second Prize in Shandong division of national undergraduate electronic design contest}
+\cvitem{2011.07}{First Prize in Shandong undergraduate mechanical and electronic products innovation design contest}
+\cvitem{2010.10}{National motivational scholarship}
+
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\end{document}
+%% end of file `template.tex'.

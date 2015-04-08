@@ -1,0 +1,118 @@
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv 主题
+\moderncvstyle{classic}                        % 选项参数是 ‘casual’, ‘classic’, ‘oldstyle’ 和 ’banking’
+\moderncvcolor{blue}                          % 选项参数是 ‘blue’ (默认)、‘orange’、‘green’、‘red’、‘purple’ 和 ‘grey’
+%\nopagenumbers{}                             % 消除注释以取消自动页码生成功能
+
+% 字符编码
+\usepackage[utf8]{inputenc}                   % 替换你正在使用的编码
+\usepackage{CJKutf8}
+
+% 调整页面出血
+\usepackage[scale=0.80]{geometry}
+\setlength{\hintscolumnwidth}{2.4cm}           % 如果你希望改变日期栏的宽度
+
+% 个人信息
+\name{\qquad丁}{峰}
+\title{\qquad\qquad应聘研发工程师}                     % 可选项、如不需要可删除本行
+\address{湖北武汉-洪山区珞瑜路1037号}{华中科技大学西14舍}{邮编：430074}
+\phone[mobile]{+86 18771086761}              % 可选项、如不需要可删除本行
+\email{ding1354@126.com}                    % 可选项、如不需要可删除本行
+\homepage{jasonding1354.github.io}                  % 可选项、如不需要可删除本行
+%\photo[64pt][0.4pt]{picture}                  % ‘64pt’是图片必须压缩至的高度、‘0.4pt‘是图片边框的宽度 (如不需要可调节至0pt)、’picture‘ 是图片文件的名字;可选项、如不需要可删除本行
+
+% 显示索引号;仅用于在简历中使用了引言
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+% 分类索引
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            内容
+%----------------------------------------------------------------------------------
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}                       % 详情参阅CJK文件包
+\maketitle
+
+\section{教育背景}
+\cventry{2013.9-至今}{硕士}{华中科技大学}{信息与通信工程}{\textit{加权成绩：86.7(前10\%)}}{}  % 第3到第6编码可留白
+\cventry{2008.9-2012.6}{学士}{鲁东大学}{通信工程}{\textit{加权成绩：87.8(前5\%)}}{}
+
+\section{个人技能}
+\cvitem{英语}{CET-6}
+\cvitem{计算机}{系统集成项目管理工程师资格认证}
+\cvitem{技术博客}{jasonding1354.github.io}
+\cvitem{专业技能}{熟悉C/C++、Python编程语言\newline
+			  熟悉常用的数据结构和算法\newline
+			  了解机器学习算法和技术，对数据分析感兴趣\newline
+			  良好的知识管理能力，有整理个人技术博客的习惯
+			  }
+
+\section{项目经历}
+\renewcommand{\baselinestretch}{1.2}
+
+\cventry{2014.7-2015.4}{视频监控软件平台系统}{C++\quad OpenCV}{校企合作项目}{}{}
+\subsection{项目描述}
+\cvitem{}{视频监控软件平台系统旨在建立支持多厂家主流视频设备接入，提供监控视频媒体直/点播服务，支持直播回放，支持录像/拍照，支持设备管理，并带有人脸识别等功能于一体的智能管理平台}
+\subsection{个人工作}
+\cvitem{}{
+\begin{itemize}
+\item 实现对视频的存储、快速查询、精确查询、录像计划的增删改
+\item 实现按帧拍照、即时拍照、拍照计划的增删改
+\item 负责人脸跟踪和人脸识别功能的开发
+	\begin{itemize}
+	\item 利用AdaBoost、MeanShift、Kalman滤波器等算法进行人脸的捕获和跟踪
+	\item 利用混合高斯模型、粒子滤波器算法进行运动目标的跟踪
+	\item 开发基于ActiveX的人脸采集浏览器插件
+	\item 对人脸识别过程进行并行化设计、使用相似性搜索算法提高匹配速度
+	\end{itemize}
+\end{itemize}
+}
+\cventry{2013.9-至今}{快速说话人识别的研究}{C++\quad Python}{国家自然科学基金项目}{}{}
+\subsection{项目描述}
+\cvitem{}{快速说话人识别的研究旨在通过声纹特征识别的方法来进行日常语音通话中的垃圾语音过滤和欺诈异常检测。利用高斯混合模型-通用背景模型(GMM-UBM)来描述说话人特征，通过最大后验概率进行匹配计算，该过程结合核方法和位置敏感哈希算法，将模型特征进行特征变换和编码，从而达到快速识别的效果。}
+\subsection{个人工作}
+\cvitem{}{
+\begin{itemize}
+\item 开发基于嵌入式linux的电话语音采集系统，实现自动接听电话、录音文件上传等功能
+\item 研究高维数据的相似性搜索算法（尤其是位置敏感哈希算法），进行实现和理论探索
+\end{itemize}
+}
+
+\section{获奖情况}
+\cvitem{2014.10}{华中科技大学知行奖学金}
+\cvitem{2014.09}{华中科技大学研究生全额奖学金}
+\cvitem{2013.09}{华中科技大学研究生全额奖学金}
+\cvitem{2012.06}{校级优秀毕业生}
+\cvitem{2011.08}{全国电子设计大赛山东赛区二等奖}
+\cvitem{2011.07}{山东省机电创新设计大赛一等奖}
+\cvitem{2010.10}{国家励志奖学金}
+
+% 来自BibTeX文件但不使用multibib包的出版物
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% BibTeX的数字标签
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                    % 'publications' 是BibTeX文件的文件名
+
+% 来自BibTeX文件并使用multibib包的出版物
+%\section{出版物}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}               % 'publications' 是BibTeX文件的文件名
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}               % 'publications' 是BibTeX文件的文件名
+
+\clearpage\end{CJK}
+\end{document}
+
+
+%% 文件结尾 `template-zh.tex'.
